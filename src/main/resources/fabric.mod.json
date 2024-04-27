@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "qzx-world-king",
+	"version": "${version}",
+	"name": "QZX-World-King",
+	"description": "I'm qingzhixing, The KING of the WORLD!!!!!!!!!",
+	"authors": [
+		"World King - qingzhixing"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/qzx-world-king/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"qingzhixing.qzx_world_king.QZXWorldKing"
+		],
+		"client": [
+			"qingzhixing.qzx_world_king.QZXWorldKingClient"
+		],
+		"fabric-datagen": [
+			"qingzhixing.qzx_world_king.QZXWorldKingDataGenerator"
+		]
+	},
+	"mixins": [
+		"qzx-world-king.mixins.json",
+		{
+			"config": "qzx-world-king.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
